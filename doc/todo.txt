@@ -1,0 +1,5 @@
+
+1、EnvironmentAware
+2、EnvironmentPostProcess
+3、动态改变EnvironmentAware是否可行
+4、config.location
