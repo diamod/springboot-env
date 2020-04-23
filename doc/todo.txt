@@ -3,3 +3,32 @@
 2、EnvironmentPostProcess
 3、动态改变EnvironmentAware是否可行
 4、config.location
+
+
+@SpringBootApplication
+@EnableConfigurationProperties({DynamicSetting.class})
+public class App {
+
+    public static void main(String [] args){
+        SpringApplication.run(App.class);
+    }
+
+}
+
+
+@Configuration
+@ConfigurationProperties
+@PropertySource("classpath:config/applicationDynamic.properties")
+public class DynamicSetting {
+    @Value("${file.fPath}")
+    private String fPath;
+
+
+    SpringBoot之ApplicationContextInitializer的理解和使用
+    https://www.cnblogs.com/hello-shf/p/10987360.html
+
+    https://www.cnblogs.com/grey-wolf/p/12535152.html#_label2_1
+
+
+    RabbitHealthIndicatorAutoConfiguration
+    RabbitHealthIndicatorConfiguration
